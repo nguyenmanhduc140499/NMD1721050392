@@ -46,11 +46,11 @@ namespace NMD1721050392.Controllers
             }
             else
             {// lấy giá trị lectureID mới nhất
-                var studenID = db.Lectures.ToList().OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
+                var LectureID = db.Lectures.ToList().OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
                 //sinh ra lectureID tự động
-                lecID = genKey.AutoGeneredKey(studenID);
+                lecID = genKey.AutoGeneredKey(LectureID);
             }
-            ViewBag.studentID = lecID;
+            ViewBag.LectureID = lecID;
             return View();
         }
 

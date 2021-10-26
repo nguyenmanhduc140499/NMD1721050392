@@ -49,11 +49,11 @@ namespace NMD1721050392.Controllers
             }
             else
             {// lấy giá trị personID mới nhất
-                var studenID = db.Persons.ToList().OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
+                var PersonID = db.Persons.ToList().OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
                 //sinh ra personID tự động
-                PerID = atGKey.AutoGeneredKey(studenID);
+                PerID = atGKey.AutoGeneredKey(PersonID);
             }
-            ViewBag.studentID = PerID;
+            ViewBag.PersonID = PerID;
             return View();
         }
 

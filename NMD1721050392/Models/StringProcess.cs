@@ -20,7 +20,7 @@ namespace NMD1721050392.Models
 
             for (int i = 0; i < numPart.Length - Phanso.ToString().Length; i++)
             {
-                strPhanso += "00";
+                strPhanso += "0";
             }
             strPhanso += Phanso;
             strkey = strPart + strPhanso;
